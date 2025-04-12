@@ -3,47 +3,47 @@ import os
 import re
 from tkinter import Tk, filedialog, messagebox, Button, Label
 
-# Função para limpar o nome do autor para ser usado como nome de arquivo
+# Function to sanitize the author's name to be used as a filename
 def clean_filename(name):
     if not name or not isinstance(name, str):
         return "unknown_author"
-    # Substituir caracteres inválidos por underscore
+    # Replace invalid characters with underscore
     return re.sub(r'[\/:*?"<>|]', '_', name.replace(' ', '_'))
 
-# Função principal para dividir o JSON
-def dividir_json_por_autor():
-    # Janela do tkinter
+# Main function to split the JSON by author
+def split_json_by_author():
+    # Tkinter window setup
     root = Tk()
-    root.withdraw()  # Oculta a janela principal
+    root.withdraw()  # Hide the main window
 
-    # Selecionar o arquivo JSON de entrada
-    json_file = filedialog.askopenfilename(title="Selecione o arquivo JSON de entrada", filetypes=[("Arquivos JSON", "*.json")])
+    # Select the input JSON file
+    json_file = filedialog.askopenfilename(title="Select the input JSON file", filetypes=[("JSON files", "*.json")])
     if not json_file:
-        messagebox.showerror("Erro", "Nenhum arquivo JSON selecionado.")
+        messagebox.showerror("Error", "No JSON file selected.")
         return
 
-    # Selecionar o diretório de saída
-    output_dir = filedialog.askdirectory(title="Selecione o diretório de saída")
+    # Select the output directory
+    output_dir = filedialog.askdirectory(title="Select the output directory")
     if not output_dir:
-        messagebox.showerror("Erro", "Nenhum diretório de saída selecionado.")
+        messagebox.showerror("Error", "No output directory selected.")
         return
 
-    output_dir = os.path.join(output_dir, 'autores_json')
+    output_dir = os.path.join(output_dir, 'authors_json')
     os.makedirs(output_dir, exist_ok=True)
 
-    # Carregar o JSON principal
+    # Load the main JSON file
     try:
         with open(json_file, 'r', encoding='utf-8') as file:
             data = json.load(file)
     except Exception as e:
-        messagebox.showerror("Erro", f"Erro ao carregar o arquivo JSON: {e}")
+        messagebox.showerror("Error", f"Failed to load JSON file: {e}")
         return
 
-    # Separar os dados por autor e salvar em JSONs individuais
+    # Split the data by author and save individual JSONs
     for entry in data:
         author = entry.get('author')
 
-        # Verificar se o campo 'author' existe e é uma string válida
+        # Check if 'author' field is valid
         if author is None or not isinstance(author, str) or author.strip() == '':
             author = 'unknown_author'
         else:
@@ -52,7 +52,7 @@ def dividir_json_por_autor():
         author_filename = clean_filename(author) + '.json'
         json_output = os.path.join(output_dir, author_filename)
 
-        # Se o arquivo já existe, adiciona a entrada ao arquivo existente
+        # Append to existing file or create a new one
         if os.path.isfile(json_output):
             with open(json_output, 'r', encoding='utf-8') as file:
                 existing_data = json.load(file)
@@ -65,8 +65,8 @@ def dividir_json_por_autor():
             with open(json_output, 'w', encoding='utf-8') as file:
                 json.dump([entry], file, indent=4, ensure_ascii=False)
 
-    messagebox.showinfo("Concluído", "JSONs criados para cada nome de autor.")
-    print("JSONs criados para cada nome de autor.")
+    messagebox.showinfo("Done", "JSON files have been created for each author.")
+    print("✅ JSON files created for each author.")
 
 if __name__ == "__main__":
-    dividir_json_por_autor()
+    split_json_by_author()
