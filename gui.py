@@ -9,7 +9,7 @@ import gcn.embedding_extraction_gcn as embedding_extraction_gcn
 import subprocess
 from threading import Thread
 
-from data_process.pre_process_ghac import dividir_json_por_autor
+from data_process.pre_process_ghac import split_json_by_author
 from data_process.pre_processing import run_pre_processing 
 
 
@@ -158,7 +158,7 @@ class MainApplication(ttk.Window):
     # Split JSON dataset into individual author files for GHAC validation (sometimes no needed)
     def run_dividir_json_por_autor(self):
         try:
-            Thread(target=dividir_json_por_autor).start()
+            Thread(target=split_json_by_author).start()
         except Exception as e:
             messagebox.showerror("Error", f"Failed to split JSON: {e}")
     # Launch GHAC clustering validation script
