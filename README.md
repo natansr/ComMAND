@@ -41,7 +41,7 @@ This GUI supports feature selection, embedding extraction, graph creation, GCN t
 
 ## Dependencies
 
-- Python 3.8+
+- Python 3.10+
 - PyTorch
 - PyTorch Geometric
 - HuggingFace Transformers
