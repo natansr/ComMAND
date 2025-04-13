@@ -1,6 +1,6 @@
 # ComMAND: A Combined Method for Author Name Disambiguation
 
-ComMAND is a framework for Author Name Disambiguation (AND) that combines SciBERT-based embeddings, heterogeneous graph construction, Graph Convolutional Networks (GCN), and GHAC clustering. The system is accessible via a graphical interface built with ttkbootstrap.
+This work presents a framework with ComMAND for Author Name Disambiguation (AND) that combines SciBERT-based embeddings, heterogeneous graph construction, Graph Convolutional Networks (GCN), and GHAC clustering. The system is accessible via a graphical interface built with ttkbootstrap.
 
 ## Project Structure
 
