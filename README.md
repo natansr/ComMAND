@@ -59,5 +59,4 @@ pip install -r requirements.txt
 
 ## Notes
 
-- Only SciBERT is currently supported for embedding extraction.
 - Evaluation includes Pairwise Precision, Recall, F1-score, ACP, AAP, and K-Metric.
