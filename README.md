@@ -99,6 +99,19 @@ The `datasets/` directory should contain structured JSON files with fields like:
 }
 ```
 
+## Workflow and Folder Usage
+
+The GUI supports a modular pipeline where users select input and output folders at each stage:
+
+- **Pre-processing**: Select a folder with raw JSON files and a folder to save the pre-processed output.
+- **Graph Construction**: Use the pre-processed folder as input and choose a folder to save the generated heterogeneous graph.
+- **Embedding Extraction**: Select the same pre-processed folder to extract SciBERT embeddings and specify the output location.
+- **GCN Training**: Load the saved graph and embeddings to train the GCN and generate refined document representations.
+- **GHAC Clustering**: Use the GCN-generated embeddings as input for clustering, and provide the original raw JSON folder (with ground truth) for evaluation.
+
+This flexible, folder-based design allows users to process data incrementally, test components independently, and reuse intermediate results efficiently across the AND pipeline.
+
+
 
 ## Notes
 
