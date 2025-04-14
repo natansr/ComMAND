@@ -114,7 +114,14 @@ The GUI supports a modular pipeline where users select input and output folders 
 - **GCN Training**: Load the saved graph and embeddings to train the GCN and generate refined document representations.
 - **GHAC Clustering**: Use the GCN-generated embeddings as input for clustering, and provide the original raw JSON folder (with ground truth) for evaluation.
 
+
+<p align="center">
+  <img src="workflow.png" alt="GUI" width="600"/>
+</p>
+
+
 This flexible, folder-based design allows users to process data incrementally, test components independently, and reuse intermediate results efficiently across the AND pipeline.
+
 
 
 
