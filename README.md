@@ -2,6 +2,13 @@
 
 This work presents a framework with ComMAND for Author Name Disambiguation (AND). It combines transfer learning using SciBERT-based embeddings, constructing a heterogeneous graph, and learning with Graph Convolutional Networks (GCN) and Graph-enhanced Hierarchical Agglomerative Clustering (GHAC) clustering. The framework is accessible via a Graphical User Interface (GUI).
 
+## 🖼️ Graphical Interface
+
+The framework includes a graphical interface that allows users to run the full pipeline without coding. Users can select features, run preprocessing, extract embeddings, create graphs, and apply GCN and GHAC models step by step.
+
+![GUI](image.png)
+
+
 ## Project Structure
 
 ```
@@ -44,7 +51,7 @@ We recommend using **Python 3.10+**. To install dependencies:
 
 
 ```bash
-git clone https://github.com/SeuUsuario/ComMAND.git
+git clone https://anonymous.4open.science/r/ComMAND-CD68.git
 cd ComMAND
 pip install -r requirements.txt
 ```
@@ -52,18 +59,29 @@ pip install -r requirements.txt
 
 ## Running the Application
 
-To start the graphical interface:
+
+To start the GUI:
 
 ```bash
 python gui.py
 ```
 
+The interface supports:
+- Feature selection
+- Pre-processing
+- Embedding extraction
+- Graph construction
+- GCN training
+- GHAC clustering and evaluation
 
 
 The framework is compatible with standard AND datasets, including:
 - **AMiner-12**
 - **AMiner-18**
 - **DBLP**
+
+Sample datasets are provided in compressed format inside the `datasets/` directory for testing purposes.
+
 
 The `datasets/` directory should contain structured JSON files with fields like:
 ```json
@@ -77,10 +95,6 @@ The `datasets/` directory should contain structured JSON files with fields like:
   "label": "real_author_id"
 }
 ```
-
-
-This GUI supports feature selection, embedding extraction, graph creation, GCN training, and clustering validation.
-
 
 
 ## Notes

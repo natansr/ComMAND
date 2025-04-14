@@ -16,7 +16,7 @@ from data_process.pre_processing import run_pre_processing
 class MainApplication(ttk.Window):
     def __init__(self):
         super().__init__(themename="superhero")
-        self.title("ComMAND v.0.1")
+        self.title("Framework with ComMAND v.0.1")
         self.geometry("600x500")
         
         self.selected_features = {
@@ -31,7 +31,7 @@ class MainApplication(ttk.Window):
         self.create_menu()
     # Setup the main user interface with buttons and labels
     def setup_ui(self):
-        ttk.Label(self, text="Welcome to ComMAND!", font=("Helvetica", 16)).pack(pady=10)
+        ttk.Label(self, text="Welcome!", font=("Helvetica", 16)).pack(pady=10)
 
         ttk.Label(self, text="Select features for AND task:").pack(pady=5)
         for feature, var in self.selected_features.items():
