@@ -1,6 +1,6 @@
 # ComMAND: A Combined Method for Author Name Disambiguation
 
-This work presents a framework with ComMAND for Author Name Disambiguation (AND). It combines transfer learning using SciBERT-based embeddings, constructing a heterogeneous graph, and learning with Graph Convolutional Networks (GCN) and Graph-enhanced Hierarchical Agglomerative Clustering (GHAC) clustering. The framework is accessible via a graphical user interface.
+This work presents a framework with ComMAND for Author Name Disambiguation (AND). It combines transfer learning using SciBERT-based embeddings, constructing a heterogeneous graph, and learning with Graph Convolutional Networks (GCN) and Graph-enhanced Hierarchical Agglomerative Clustering (GHAC) clustering. The framework is accessible via a Graphical User Interface (GUI).
 
 ## Project Structure
 
@@ -25,7 +25,7 @@ This work presents a framework with ComMAND for Author Name Disambiguation (AND)
 
 - **Pre-processing**: Filters input JSONs by selected features.
 - **NLP**: Extracts contextual embeddings using SciBERT (`allenai/scibert_scivocab_uncased`).
-- **Graph Construction**: Builds a heterogeneous graph including papers, authors, venues, and keywords.
+- **Graph Construction**: Builds a heterogeneous graph including papers, authors, abstracts, venues, and keywords.
 - **GCN**: Learns refined node embeddings from the graph structure.
 - **GHAC**: Clusters documents into authors and evaluates results using standard AND metrics.
 
@@ -60,7 +60,7 @@ python gui.py
 
 
 
-ComMAND is compatible with standard AND datasets, including:
+The framework is compatible with standard AND datasets, including:
 - **AMiner-12**
 - **AMiner-18**
 - **DBLP**
