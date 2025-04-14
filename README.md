@@ -2,11 +2,14 @@
 
 This work presents a framework with ComMAND for Author Name Disambiguation (AND). It combines transfer learning using SciBERT-based embeddings, constructing a heterogeneous graph, and learning with Graph Convolutional Networks (GCN) and Graph-enhanced Hierarchical Agglomerative Clustering (GHAC) clustering. The framework is accessible via a Graphical User Interface (GUI).
 
-## 🖼️ Graphical Interface
+## GUI
 
-The framework includes a graphical interface that allows users to run the full pipeline without coding. Users can select features, run preprocessing, extract embeddings, create graphs, and apply GCN and GHAC models step by step.
+The framework includes a GUI that allows users to run the full pipeline without coding. Users can select features, run preprocessing, extract embeddings, create graphs, and apply GCN and GHAC models step by step.
 
-![GUI](image.png)
+
+<p align="center">
+  <img src="image.png" alt="GUI" width="600"/>
+</p>
 
 
 ## Project Structure
