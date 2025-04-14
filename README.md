@@ -85,7 +85,7 @@ The framework is compatible with standard AND datasets, including:
 
 You can download example datasets in zipped format from the following link:
 
-🔗 [Download Datasets (Google Drive)](https://drive.google.com/drive/folders/1jxtOWCOlS6vX6ewIQYNHmaMEZncQrkyW?usp=drive_link)
+- [Download Datasets (Google Drive)](https://drive.google.com/drive/folders/1jxtOWCOlS6vX6ewIQYNHmaMEZncQrkyW?usp=drive_link)
 
 Each dataset should be unzipped into the `datasets/` directory and must contain JSON files with the following structure:
 
