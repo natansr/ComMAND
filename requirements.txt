@@ -48,7 +48,7 @@ pillow==11.0.0
 platformdirs @ file:///home/conda/feedstock_root/build_artifacts/platformdirs_1733232627818/work
 prompt_toolkit @ file:///home/conda/feedstock_root/build_artifacts/prompt-toolkit_1733302527033/work
 propcache==0.2.1
-psutil @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_1310b568-21f4-4cb0-b0e3-2f3d31e39728k9coaga5/croots/recipe/psutil_1656431280844/work
+psutil==6.1.0
 ptyprocess @ file:///home/conda/feedstock_root/build_artifacts/ptyprocess_1733302279685/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl#sha256=92c32ff62b5fd8cf325bec5ab90d7be3d2a8ca8c8a3813ff487a8d2002630d1f
 pure_eval @ file:///home/conda/feedstock_root/build_artifacts/pure_eval_1733569405015/work
 pyarrow==18.1.0

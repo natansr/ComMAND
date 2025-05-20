@@ -78,7 +78,7 @@ The interface supports:
 - GHAC clustering and evaluation
 
 
-The framework is compatible with standard AND datasets, including:
+The framework has been tested with the following sample datasets used in our experiments:
 - **AMiner-12**
 - **AMiner-18**
 - **DBLP**

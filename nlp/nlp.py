@@ -142,8 +142,11 @@ def main():
     ttk.Combobox(root, textvariable=model_var, values=[
         "bert-base-uncased",
         "bert-large-uncased",
-        "allenai/scibert_scivocab_uncased"
+        "allenai/scibert_scivocab_uncased",
+        "allenai/specter",
+        "sentence-transformers/all-MiniLM-L6-v2"
     ], width=50, bootstyle="primary").pack(pady=5)
+
 
     ttk.Button(root, text="Select Fine-Tuned Model Directory", bootstyle="info",
                command=lambda: model_var.set(filedialog.askdirectory(title="Select fine-tuned model directory"))).pack(pady=5)
